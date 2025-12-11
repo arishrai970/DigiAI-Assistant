@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>DigiSkills AI Assistant</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🤖 DigiSkills AI</h1>
+      <p class="subtitle">Automated Student Assistant</p>
+    </div>
+    
+    <div class="status">
+      <div class="status-item">
+        <span class="label">Queue Size:</span>
+        <span id="queueCount" class="value">0</span>
+      </div>
+      <div class="status-item">
+        <span class="label">Status:</span>
+        <span id="statusText" class="value">Idle</span>
+      </div>
+      <div class="status-item">
+        <span class="label">Est. Time:</span>
+        <span id="estTime" class="value">-</span>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h3>🔑 API Configuration</h3>
+      <div class="input-group">
+        <label for="apiKey">OpenAI API Key:</label>
+        <input type="password" id="apiKey" placeholder="sk-...">
+        <button id="saveKey" class="btn">Save Key</button>
+      </div>
+      <p class="help">Get API key from <a href="https://platform.openai.com" target="_blank">OpenAI</a></p>
+    </div>
+    
+    <div class="section">
+      <h3>⚙️ Settings</h3>
+      <div class="setting">
+        <label>
+          <input type="checkbox" id="autoMode" checked>
+          Auto-reply mode
+        </label>
+      </div>
+      <div class="setting">
+        <label>Response Style:</label>
+        <select id="responseStyle">
+          <option value="friendly">Friendly</option>
+          <option value="professional">Professional</option>
+          <option value="concise">Concise</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h3>🛠️ Actions</h3>
+      <button id="processBtn" class="btn primary">Process Queue Now</button>
+      <button id="clearBtn" class="btn secondary">Clear Queue</button>
+      <button id="refreshBtn" class="btn secondary">Refresh</button>
+    </div>
+    
+    <div class="footer">
+      <p>Navigate to <strong>digiskills.pk</strong> to start</p>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
